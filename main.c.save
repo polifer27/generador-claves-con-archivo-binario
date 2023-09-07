@@ -22,7 +22,7 @@ void salir(void);
 struct dir {
     char aplicacion[30];
     char usuario[40];
-    char contraseña[20];
+    char clave[20];
 }lista_dir[MAX];
 
 // Variable global que evita guardar datos antes de cargar
@@ -205,11 +205,11 @@ void listar(void)
         if(lista_dir[t].aplicacion[0]){
             // Al mostrarlo empieza desde el registro 1 pero
             // internamente sigue siendo 0 el primer registro
-            printf("Numero registro: %d\n", j+1);
-            printf("%s\n", lista_dir[t].aplicacion);
-            printf("%s\n", lista_dir[t].usuario);
-            printf("%s\n", lista_dir[t].contraseña);
-            printf("************************************\n");
+            printf("      Registro número %d\n", j+1);
+            printf("      Aplicacion: %s\n", lista_dir[t].aplicacion);
+            printf("      Usuario: %s\n", lista_dir[t].usuario);
+            printf("      Contraseña: %s\n", lista_dir[t].contraseña);
+            printf("**********************************\n");
         }
     }
     printf("\n");
@@ -260,11 +260,11 @@ void cargar(void)
         if(lista_dir[i].aplicacion[0]){
             // j+1 lo mismo que listar lo deja mas prolijo
             // para el usuario pero el primer registro internamente sigue siendo el cero
-            printf("   Registro número %d\n", j+1);
-            printf("   Aplicacion: %s\n", lista_dir[i].aplicacion);
-            printf("   Usuario: %s\n", lista_dir[i].usuario);
-            printf("   Contraseña: %s\n", lista_dir[i].contraseña);
-            printf("************************************\n");
+            printf("      Registro número %d\n", j+1);
+            printf("      Aplicacion: %s\n", lista_dir[i].aplicacion);
+            printf("      Usuario: %s\n", lista_dir[i].usuario);
+            printf("      Contraseña: %s\n", lista_dir[i].contraseña);
+            printf("**********************************\n");
         }
     }
     condicion = 0;

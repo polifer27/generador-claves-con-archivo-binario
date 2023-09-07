@@ -22,7 +22,7 @@ void salir(void);
 struct dir {
     char aplicacion[30];
     char usuario[40];
-    char contraseña[20];
+    char clave[20];
 }lista_dir[MAX];
 
 // Variable global que evita guardar datos antes de cargar
@@ -120,7 +120,7 @@ int intro(void)
     p = generate_key(NUM_CARACTERES);
 
     for(int i = 0; *p != '\0'; i++, p++){
-        lista_dir[sitio].contraseña[i] = *p;
+        lista_dir[sitio].clave[i] = *p;
     }
     printf(" **********************************************************\n");
     printf(" * Oprima guardar en caso contrario se pierden los datos. *\n");
@@ -208,7 +208,7 @@ void listar(void)
             printf("      Registro número %d\n", j+1);
             printf("      Aplicacion: %s\n", lista_dir[t].aplicacion);
             printf("      Usuario: %s\n", lista_dir[t].usuario);
-            printf("      Contraseña: %s\n", lista_dir[t].contraseña);
+            printf("      Contraseña: %s\n", lista_dir[t].clave);
             printf("**********************************\n");
         }
     }
@@ -263,7 +263,7 @@ void cargar(void)
             printf("      Registro número %d\n", j+1);
             printf("      Aplicacion: %s\n", lista_dir[i].aplicacion);
             printf("      Usuario: %s\n", lista_dir[i].usuario);
-            printf("      Contraseña: %s\n", lista_dir[i].contraseña);
+            printf("      Contraseña: %s\n", lista_dir[i].clave);
             printf("**********************************\n");
         }
     }
