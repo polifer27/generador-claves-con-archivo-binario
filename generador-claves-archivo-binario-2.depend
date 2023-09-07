@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1682428764 source:/home/poli/Documents/lenguaje-C/misproyectos/generador-claves-archivo-binario-2/main.c
+1682431806 source:/home/poli/Documents/lenguaje-C/misproyectos/generador-claves-archivo-binario-2/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
